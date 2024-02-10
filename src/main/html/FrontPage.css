@@ -74,9 +74,9 @@ footer {
     .content-section {
         background-color: #F4F1DE;
         color: #3D405B;
-        padding: 20px;
+        padding: 20px 40px;
         margin: 20px auto;
-        max-width: 800px; /* Adjust based on preference */
+        max-width: 600px; /* Adjust based on preference */
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
