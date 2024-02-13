@@ -110,3 +110,45 @@ footer {
 .social-media a:hover {
     color: #E07A5F;
 }
+.login-form {
+    max-width: 400px;
+    padding: 20px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.login-form h1 {
+    text-align: center;
+    color: #3D405B;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #81B29A;
+}
+
+.login-form input[type="submit"] {
+    background-color: #E07A5F;
+    color: white;
+    cursor: pointer;
+}
+
+.login-form input[type="checkbox"] {
+    margin: 10px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .login-form {
+        margin: 20px;
+        padding: 20px;
+    }
+}
