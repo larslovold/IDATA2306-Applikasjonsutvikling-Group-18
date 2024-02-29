@@ -9,13 +9,23 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>Stay Finder</h1>
+            <div class="brand-name">
+                <a href="index.html"><h1>STAY FINDER</a></h1>
+            </div>
             <div class="user-menu">
-                <div class="user-icon">👤</div>
-                <div class="burger-menu">☰</div>
+                <a href="login.html" class="user-icon">👤</a>
+                <div class="burger-menu">
+                    ☰
+                    <div class="dropdown-content">
+                        <a href="support.html">Support</a>
+                        <a href="about-us.html">About us</a>
+                        <a href="preferences.html">Preferences</a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+    
     <main>
         <div class="headline">
             <h1>DISCOVER YOUR DREAM STAY WITH STAY FINDER TODAY!</h1>
@@ -25,7 +35,43 @@
             <input type="date" id="check-in">
             <input type="date" id="check-out">
             <button id="find-button">Find</button>
-        </div>    
+        </div>   
+        
+        <section class="explore-section">
+            <h2>Explore the World</h2>
+            <h3>These are our most popular destinations</h3>
+            <div class="destinations-container">
+                <a href="oslo.html" class="destination">
+                    <img src="../resources/aalesund.jpg" alt="Oslo">
+                    <p>Oslo</p>
+                </a>
+                <a href="bergen.html" class="destination">
+                    <img src="../resources/aalesund.jpg" alt="Oslo">
+                    <p>Bergen</p>
+                </a>
+                <a href="madrid.html" class="destination">
+                    <img src="../resources/aalesund.jpg" alt="Oslo">
+                    <p>Madrid</p>
+                </a>
+                <a href="madrid.html" class="destination">
+                    <img src="../resources/aalesund.jpg" alt="Oslo">
+                    <p>Madrid</p>
+                </a>
+                <a href="madrid.html" class="destination">
+                    <img src="../resources/aalesund.jpg" alt="Oslo">
+                    <p>Madrid</p>
+                </a>
+                <a href="madrid.html" class="destination">
+                    <img src="../resources/aalesund.jpg" alt="Oslo">
+                    <p>Madrid</p>
+                </a>
+                <a href="madrid.html" class="destination">
+                    <img src="../resources/aalesund.jpg" alt="Oslo">
+                    <p>Madrid</p>
+                </a>
+
+            </div>
+        </section>
 
         <div class="image-text-container left" style="background-color: #F4F1DE;"> <!-- Terra Cotta -->
             <img src="../resources/hotel1.jpg" alt="Room">
