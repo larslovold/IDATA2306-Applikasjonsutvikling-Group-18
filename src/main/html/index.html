@@ -3,45 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Price Comparison</title>
-    <link rel="stylesheet" href="FrontPage.css">
+    <title>Stay Finder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">𝐒𝐓𝐀𝐘 𝐅𝐈𝐍𝐃𝐄𝐑</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About</a></li>
-                <li><a href="contactus.html">Contact</a></li>
-            </ul>
-            <ul class="login-icon">
-                <li class="login-dropdown">
-                    <a href="login.html"><img src="../resources/user.png" alt="Login" style="height: 30px;"></a>
-                    <div class="dropdown-content">
-                        <a href="profile.html">Profile</a>
-                        <a href="preferences.html">Preferences</a>
-                        <a href="logout.html">Logout</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <h1>Stay Finder</h1>
+            <div class="user-menu">
+                <div class="user-icon">👤</div>
+                <div class="burger-menu">☰</div>
+            </div>
+        </div>
     </header>
+    <main>
+        <div class="headline">
+            <h1>DISCOVER YOUR DREAM STAY WITH STAY FINDER TODAY!</h1>
+        </div>
+        <div class="search-area">
+            <input type="text" id="destination" placeholder="Destination">
+            <input type="date" id="check-in">
+            <input type="date" id="check-out">
+            <button id="find-button">Find</button>
+        </div>    
+
+        <div class="image-text-container left" style="background-color: #F4F1DE;"> <!-- Terra Cotta -->
+            <img src="../resources/hotel1.jpg" alt="Room">
+            <div class="text-content left">
+            <h1>OUR SERVICES</h1><p>Experience unparalleled comfort and convenience at our hotel, where every guest is treated
+            to a suite of premium amenities. From our state-of-the-art fitness center and serene spa services
+            to our fine dining options and high-speed Wi-Fi connectivity, we ensure a seamless stay whether
+            you're here for business or leisure. Our dedicated concierge service is on hand to tailor your experience
+            to your needs, making every moment of your stay exceptional.</p>
+            </div>
+
+        </div>
+
+        <div class="image-text-container right" style="background-color: #E07A5F;"> <!-- Antique White -->
+            <img src="../resources/hotel2.jpg" alt="Room">
+            <div class="text-content right">
+            <h1>ABOUT US</h1><p>Nestled in the heart of the city, our hotel embodies a haven of sophistication with a touch
+            of timeless charm. Each of our rooms is designed with a blend of classic elegance and modern
+            luxury, ensuring a restful night's sleep. Our commitment to excellence is echoed through our attentive
+            staff, who strive to create a memorable experience for each guest. Celebrating a rich heritage
+            of hospitality, we welcome you to discover a stay that feels like home, yet is infused with the excitement
+            of travel.
+            </p>
+            </div>
+        </div>
+
+        <div class="image-text-container left" style="background-color: #F4F1DE;"> <!-- Terra Cotta -->
+            <img src="../resources/hotel3.jpg" alt="hotel">
+            <div class="text-content left">
+            <h1>START NOW!</h1><p>
+            Step outside the doors of our hotel and immerse yourself in the vibrant culture
+            that surrounds us. Our prime location offers easy access to the city's most renowned
+            attractions, from bustling marketplaces and historic landmarks to scenic parks and lively
+            entertainment districts. Whether you're looking to explore the local cuisine, indulge in retail therapy
+            or discover the arts, our hotel serves as the perfect starting point for all your urban adventures.
+            </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-media-buttons">
+                <a href="https://facebook.com">Facebook</a>
+                <a href="https://twitter.com">Twitter</a>
+                <a href="https://instagram.com">Instagram</a>
+            </div>
+            <p class="rights-text">© 2024 Stay Finder. All rights reserved.</p>
+        </div>
+    </footer>
     
-<main>
-    <section class="search-section">
-        <form class="search-form">
-            <input type="text" placeholder="Search for hotels">
-            <button type="submit">Search</button>
-        </form>
-    </section>
-    <section class="how-it-works">
-        <h2>How It Works</h2>
-        <p>Find the best hotel deals by comparing prices from different websites.</p>
-    </section>
-</main>
-<footer>
-    <p>© 2024 Hotel Price Comparison. All rights reserved.</p>
-</footer>
 </body>
 </html>
