@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login | Stay Finder</title>
+    <link rel="stylesheet" href="../css/FrontPage.css">
 </head>
 <body>
     <header>
@@ -23,34 +23,47 @@
             </ul>
         </section>
     </header>
-<main>
-    <form action="" method="POST" class="login-form">
-        <h1>Log in</h1>
-        <label for="firstname">First name</label>
-        <input name="firstname" id="firstname"><br><br>
-        
-        <label for="lastname">Last name</label>
-        <input name="lastname" id="lastname"> <br><br>
-        
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <input type="checkbox" onclick="togglePassword()"> Show Password
-        
-        <input type="submit" value="Log in">
-    </form>
-</main>
-<script>
-function togglePassword() {
-  var x = document.getElementById("password");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-</script>
+    <main>
+        <div class="login-container">
+            <form action="" method="POST" class="login-form">
+                <h1>Log in</h1>
+                <div class="form-group">
+                    <label for="firstname">First name</label>
+                    <input name="firstname" id="firstname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastname">Last name</label>
+                    <input name="lastname" id="lastname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                    <input type="checkbox" onclick="togglePassword()"> Show Password
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Log in">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+    function togglePassword() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
 </body>
 </html>
