@@ -32,43 +32,115 @@ body {
     color: #3D405B; /* Deep Slate Blue */
 }
 
-.user-menu {
+.top-nav {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    position: relative; 
+    justify-content: space-between;
+    background: #F4F1DE; /* Deep Slate Blue for the header background */
+    color: #3D405B; /* Antique White for the text */
+    padding: 0.5em 1em; /* Adjust padding to your liking */
+  }
+
+.brand-name a {
+  text-decoration: none;
+  color: #F4F1DE; /* Antique White for the brand name */
+  font-size: 1.5em; /* Adjust the size as needed */
 }
 
-.burger-menu {
-    font-size: 24px;
-    cursor: pointer;
-    position: relative; /
-}
-
-.burger-menu:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content {
-    display: none; 
-    position: absolute; 
-    right: 40px; 
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  .menu a {
+    color: #3D405B; /* Antique White for menu links */
     text-decoration: none;
-    display: block;
-    text-align: left;
+  }
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,  
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #3D405B; /* Antique White for the burger icon */
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
 }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+  @media (max-width: 700px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      display: none; /* Hide menu initially, will be shown when checkbox is checked */
+      position: absolute;
+      top: 50px;
+      left: 0;
+      flex-direction:column;
+      width: 100%;
+      align-items: center;
+      background: #F4F1DE;
+      padding: 20px;
+    }
+    #menu-toggle:checked ~ .menu {
+      display: flex; /* Show menu when checkbox is checked */
+    }
+    .menu > li {
+      display: block;
+      width: 100%;
+      color: white;
+    }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
+  }
 
 .brand-name a {
     text-decoration: none;
@@ -77,14 +149,6 @@ body {
 
 .brand-name h1 {
     margin: 0; 
-}
-
-.user-icon {
-    font-size: 24px;
-    color: #3D405B; /* Deep Slate Blue */
-    text-decoration: none;
-    display: block; 
-    padding: 8px 16px; 
 }
 
 .headline{

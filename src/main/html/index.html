@@ -9,22 +9,21 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
+        <section class="top-nav">
             <div class="brand-name">
-                <a href="index.html"><h1>STAY FINDER</a></h1>
+                <a href="index.html"><h1>STAY FINDER</h1></a>
             </div>
-            <div class="user-menu">
-                <a href="login.html" class="user-icon">👤</a>
-                <div class="burger-menu">
-                    ☰
-                    <div class="dropdown-content">
-                        <a href="support.html">Support</a>
-                        <a href="about-us.html">About us</a>
-                        <a href="preferences.html">Preferences</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="about-us.html">Bookmarks</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </section>
     </header>
     
     <main>
