@@ -42,7 +42,6 @@ body {
     font-size: 24px;
     cursor: pointer;
     position: relative; /
-    margin-right: 20px; 
 }
 
 .burger-menu:hover .dropdown-content {
@@ -215,6 +214,101 @@ body {
         text-align: center; /* Center text on mobile */
     }
 }
+
+.reviews-section {
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 20px;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    margin-bottom: 20px;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.review {
+    flex: 1; /* Allows flex items to grow and shrink */
+    max-width: 23%; /* Set a maximum width */
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+    margin: 10px; /* Add some margin for spacing */
+    padding: 15px;
+    text-align: left;
+}
+
+.review h3 {
+    margin-top: 10px;
+}
+
+.review-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.stars {
+    color: black; /* Gold color for stars */
+    font-size: 1.2em; /* Larger font size for stars */
+    margin-bottom: 5px; /* Space below the stars */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .review {
+        max-width: 48%; /* Each review takes half the width on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .review {
+        max-width: 100%; /* Each review takes full width on small screens */
+    }
+}
+
+.newsletter-signup {
+    background-color: #807575; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centering the text */
+    padding: 80px ; /* Some padding around the text */
+}
+
+.signup-form {
+    margin-top: 10px; /* Space between the text and the form */
+    display: inline-block; /* To center the form in the section */
+}
+
+.signup-form input[type="email"] {
+    padding: 10px; /* Padding inside the input field */
+    border: none; /* Removing the default border */
+    margin-right: 5px; /* Space between the input field and the button */
+}
+
+.signup-form button {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #6200ea; /* Purple background color for the button */
+    color: #fff; /* White text color for the button */
+    border: none; /* Removing the default border */
+    cursor: pointer; /* Cursor effect when hovering over the button */
+}
+
+/* Add media queries for responsiveness if necessary */
+@media (max-width: 768px) {
+    .signup-form input[type="email"],
+    .signup-form button {
+        display: block; /* Stack the input field and button on small screens */
+        margin: 10px auto; /* Centering in the form */
+        width: 80%; /* Responsive width */
+    }
+}
+
 
 footer {
     background-color: #3D405B; /* Deep Slate Blue */
