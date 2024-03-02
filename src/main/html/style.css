@@ -148,7 +148,8 @@ body {
 }
 
 .destination img {
-    width: 100%; 
+    width: 150px;
+    height: 150px; 
     border-radius: 10px; 
 }
 
@@ -310,31 +311,30 @@ body {
 }
 
 
-footer {
-    background-color: #3D405B; /* Deep Slate Blue */
-    color: #F4F1DE; /* Antique White */
+.footer {
+    background-color: #2C3E50; /* Dark background for the footer */
+    color: #fff; /* White text color */
     padding: 20px;
-    text-align: center;
+    text-align: center; /* Centering the content */
 }
 
 .footer-content {
+    margin: auto;
+    max-width: 800px; /* Max width for the footer content */
+}
+
+.contact-icons {
     display: flex;
-    flex-direction: column; /* Stack footer content on top of each other */
-    align-items: center;
+    justify-content: center; /* Centering the icons */
+    margin: 50px; /* Space below icons */
 }
 
-.social-media-buttons {
-    font-size: 14px;
-    margin-bottom: 10px; /* Add space between buttons and text */
-}
-
-.social-media-buttons a {
-    color: #F4F1DE; /* Antique White */
+.contact-icons a {
     text-decoration: none;
-    margin: 0 10px;
+    color: #fff; /* White text color for icons */
+    font-size: 44px; /* Size of icons */
+    margin: 0 30px; /* Spacing between icons */
 }
 
-.rights-text {
-    text-align: center;
-    font-size: 14px;
-}
+/* Style for icons can be adjusted or you can include a font icon library like Font Awesome */
+
