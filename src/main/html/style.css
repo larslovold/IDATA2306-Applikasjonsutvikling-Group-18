@@ -37,8 +37,9 @@ body {
 }
 
 .brand-name h1 {
-    margin: 0; 
+    margin: 0;
     color: #3D405B; /* Deep Slate Blue */
+    font-size: large;
 }
 
 .top-nav {
@@ -49,33 +50,33 @@ body {
     background: #F4F1DE; /* Deep Slate Blue for the header background */
     color: #3D405B; /* Antique White for the text */
     padding: 0.5em 1em; /* Adjust padding to your liking */
-  }
-
-.brand-name a {
-  text-decoration: none;
-  color: #F4F1DE; /* Antique White for the brand name */
-  font-size: 1.5em; /* Adjust the size as needed */
 }
 
-  
-  .menu {
+.brand-name a {
+    text-decoration: none;
+    color: #F4F1DE; /* Antique White for the brand name */
+    font-size: 1.5em; /* Adjust the size as needed */
+}
+
+
+.menu {
     display: flex;
     flex-direction: row;
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .menu > li {
+}
+
+.menu > li {
     margin: 0 1rem;
     overflow: hidden;
-  }
-  
-  .menu a {
+}
+
+.menu a {
     color: #3D405B; /* Antique White for menu links */
     text-decoration: none;
-  }
-  .menu-button-container {
+}
+.menu-button-container {
     display: none;
     height: 100%;
     width: 30px;
@@ -83,73 +84,73 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  #menu-toggle {
+}
+
+#menu-toggle {
     display: none;
-  }
-  
-  .menu-button,  
+}
+
+.menu-button,
 .menu-button::before,
 .menu-button::after {
-  display: block;
-  background-color: #3D405B; /* Antique White for the burger icon */
-  position: absolute;
-  height: 4px;
-  width: 30px;
-  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: 2px;
+    display: block;
+    background-color: #3D405B; /* Antique White for the burger icon */
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
 }
-  
-  .menu-button::before {
+
+.menu-button::before {
     content: '';
     margin-top: -8px;
-  }
-  
-  .menu-button::after {
+}
+
+.menu-button::after {
     content: '';
     margin-top: 8px;
-  }
-  
-  #menu-toggle:checked + .menu-button-container .menu-button::before {
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
     margin-top: 0px;
     transform: rotate(405deg);
-  }
-  
-  #menu-toggle:checked + .menu-button-container .menu-button {
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
     background: rgba(255, 255, 255, 0);
-  }
-  
-  #menu-toggle:checked + .menu-button-container .menu-button::after {
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
     margin-top: 0px;
     transform: rotate(-405deg);
-  }
-  
-  @media (max-width: 700px) {
+}
+
+@media (max-width: 700px) {
     .menu-button-container {
-      display: flex;
+        display: flex;
     }
     .menu {
-      display: none; /* Hide menu initially, will be shown when checkbox is checked */
-      position: absolute;
-      top: 50px;
-      left: 0;
-      flex-direction:column;
-      width: 100%;
-      align-items: center;
-      background: #F4F1DE;
-      padding: 20px;
+        display: none; /* Hide menu initially, will be shown when checkbox is checked */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        flex-direction:column;
+        width: 100%;
+        align-items: center;
+        background: #F4F1DE;
+        padding: 20px;
     }
     #menu-toggle:checked ~ .menu {
-      display: flex; /* Show menu when checkbox is checked */
+        display: flex; /* Show menu when checkbox is checked */
     }
     .menu > li {
-      display: block;
-      width: 100%;
-      color: white;
+        display: block;
+        width: 100%;
+        color: white;
     }
 
-  }
+}
 
 .brand-name a {
     text-decoration: none;
@@ -157,7 +158,7 @@ body {
 }
 
 .brand-name h1 {
-    margin: 0; 
+    margin: 0;
 }
 
 .headline{
@@ -165,7 +166,7 @@ body {
 }
 .search-area {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     padding: 100px;
     gap: 10px;
@@ -176,10 +177,10 @@ body {
     padding: 10px;
     border: 1px solid #3D405B; /* Deep Slate Blue */
     border-radius: 5px;
-    background-color: #F4F1DE; /* Antique White */
+    background-color: white;
     color: #3D405B; /* Deep Slate Blue */
-    flex: 1; 
-    min-width: 120px; 
+    flex: 1;
+    min-width: 120px;
 }
 
 #find-button {
@@ -198,37 +199,37 @@ body {
 
 .explore-section h2 {
     margin-bottom: 20px;
-    color: #3D405B; 
+    color: #3D405B;
 }
 .explore-section h3 {
     margin-bottom: 20px;
-    color: #3D405B; 
+    color: #3D405B;
 }
 
 .destinations-container {
     display: flex;
-    overflow-x: auto; 
-    gap: 20px; 
-    padding-bottom: 20px; 
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
 }
 
 .destination {
-    flex: 0 0 auto; 
-    width: 200px; 
-    text-align: center; 
-    color: #3D405B; 
-    text-decoration: none; 
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+    color: #3D405B;
+    text-decoration: none;
 }
 
 .destination img {
     width: 150px;
-    height: 150px; 
-    border-radius: 10px; 
+    height: 150px;
+    border-radius: 10px;
 }
 
 .destination p {
-    margin-top: 8px; 
-    font-size: 16px; 
+    margin-top: 8px;
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -351,7 +352,8 @@ body {
     background-color: #807575; /* Dark background color */
     color: #fff; /* White text color */
     text-align: center; /* Centering the text */
-    padding: 80px ; /* Some padding around the text */
+    padding: 50px ; /* Some padding around the text */
+    font-style: italic;
 }
 
 .signup-form {
@@ -363,14 +365,16 @@ body {
     padding: 10px; /* Padding inside the input field */
     border: none; /* Removing the default border */
     margin-right: 5px; /* Space between the input field and the button */
+    border-radius: 5px;
 }
 
 .signup-form button {
     padding: 10px 20px; /* Padding inside the button */
-    background-color: #6200ea; /* Purple background color for the button */
+    background-color: #E07A5F; /* Purple background color for the button */
     color: #fff; /* White text color for the button */
     border: none; /* Removing the default border */
     cursor: pointer; /* Cursor effect when hovering over the button */
+    border-radius: 5px;
 }
 
 /* Add media queries for responsiveness if necessary */
