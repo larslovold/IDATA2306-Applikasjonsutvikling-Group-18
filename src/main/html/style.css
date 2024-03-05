@@ -16,6 +16,7 @@ html, body {
 
 body {
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
     font-family: 'Arial', sans-serif;
     background-color: #F4F1DE; /* Antique White */
@@ -392,6 +393,7 @@ body {
     background-color: #2C3E50; /* Dark background for the footer */
     color: #fff; /* White text color */
     padding: 20px;
+    margin-top: auto;
     text-align: center; /* Centering the content */
 }
 
@@ -413,5 +415,4 @@ body {
     margin: 0 30px; /* Spacing between icons */
 }
 
-/* Style for icons can be adjusted or you can include a font icon library like Font Awesome */
 

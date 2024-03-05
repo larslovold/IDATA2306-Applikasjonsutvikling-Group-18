@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-bg-color: #F4F1DE; /* Antique White */
+    --main-text-color: #3D405B; /* Deep Slate Blue */
+    --main-accent-color: #E07A5F; /* Terra Cotta */
+    --input-bg-color: #ffffff;
+    --input-border-color: #ced4da;
+}
+
+*{
+    font-family: "roboto";
+    text-decoration: none;
+}
+html, body {
+    height: 100%;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #F4F1DE; /* Antique White */
+}
+
+.header-content {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name h1 {
+    margin: 0; 
+    color: #3D405B; /* Deep Slate Blue */
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #F4F1DE; /* Deep Slate Blue for the header background */
+    color: #3D405B; /* Antique White for the text */
+    padding: 0.5em 1em; /* Adjust padding to your liking */
+  }
+
+.brand-name a {
+  text-decoration: none;
+  color: #F4F1DE; /* Antique White for the brand name */
+  font-size: 1.5em; /* Adjust the size as needed */
+}
+
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  .menu a {
+    color: #3D405B; /* Antique White for menu links */
+    text-decoration: none;
+  }
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,  
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #3D405B; /* Antique White for the burger icon */
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+  @media (max-width: 700px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      display: none; /* Hide menu initially, will be shown when checkbox is checked */
+      position: absolute;
+      top: 50px;
+      left: 0;
+      flex-direction:column;
+      width: 100%;
+      align-items: center;
+      background: #F4F1DE;
+      padding: 20px;
+    }
+    #menu-toggle:checked ~ .menu {
+      display: flex; /* Show menu when checkbox is checked */
+    }
+    .menu > li {
+      display: block;
+      width: 100%;
+      color: white;
+    }
+
+  }
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Adjust the height as needed */
+    padding: 2em;
+    background-color: var(--main-bg-color);
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 2em;
+    background: var(--input-bg-color);
+    margin: 2em;
+}
+
+.login-form h1 {
+    color: var(--main-text-color);
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    color: var(--main-text-color);
+    margin-bottom: .5em;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+    width: 100%; /* Ensures all inputs, including the submit button, are full width */
+    padding: .75em 0; /* Padding only at top and bottom to space text from the line */
+    border: none; /* Removes the default border */
+    border-bottom: 2px solid var(--input-border-color); /* Adds the underline */
+    background-color: transparent; /* Removes any background color */
+    margin-bottom: 1em; /* Adds space after each input */
+    color: var(--main-text-color);
+    font-size: 1em; /* Sets a standard font size for inputs */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+/* Removes the bottom border for the submit button */
+.login-form input[type="submit"] {
+    border-bottom: none;
+    background-color: var(--main-accent-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+.login-form input[type="submit"]:hover {
+    background-color: darken(var(--main-accent-color), 10%);
+}
+
+/* Focus effect for text, email, and password fields to show an accent bottom border */
+.login-form input[type="text"]:focus,
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    outline: none;
+    border-bottom: 2px solid var(--main-accent-color);
+}
+
+/* Show Password Checkbox Style */
+.form-group input[type="checkbox"] {
+    margin-top: .5em;
+    cursor: pointer; /* Indicates the element is clickable */
+}
+
+/* Label styles */
+.login-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: var(--main-text-color);
+}
+
+/* Adjusts the submit button to look better with the new input styles */
+.login-form input[type="submit"] {
+    padding: .75em;
+    font-weight: bold;
+    text-transform: uppercase; /* Optional: adds visual impact to the button text */
+}
+.form-group input[type="submit"] {
+    width: 100%;
+    padding: .75em;
+    border: none;
+    color: #fff;
+    background-color: var(--main-accent-color);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: darken(var(--main-accent-color), 10%);
+}
+
+/* Show Password Checkbox Style */
+.form-group input[type="checkbox"] {
+    margin-top: .5em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 1em;
+    }
+    .login-form {
+        margin: 1em;
+    }
+}
+
+.footer {
+  background-color: #2C3E50; /* Dark background for the footer */
+  color: #fff; /* White text color */
+  padding: 20px;
+  text-align: center; /* Centering the content */
+}
+
+.footer-content {
+  margin: auto;
+  max-width: 800px; /* Max width for the footer content */
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center; /* Centering the icons */
+  margin: 50px; /* Space below icons */
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: #fff; /* White text color for icons */
+  font-size: 44px; /* Size of icons */
+  margin: 0 30px; /* Spacing between icons */
+}
