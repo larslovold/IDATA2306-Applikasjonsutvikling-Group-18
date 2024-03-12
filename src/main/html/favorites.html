@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iR62qjwe8Uq1MZYZ3LGS2JFnY9P++Mb2ndbMzOWVP43LIG5f48f1dRx4L9QQ2Ovm3coExkoxgirjSP1PVyooQ==" crossorigin="anonymous" />
+</head>
+<body>
+
+<header>
+    <section class="top-nav">
+        <div class="brand-name">
+            <a href="index.html"><h1>STAY FINDER</h1></a>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="favorites.html" class="go-fav">
+                <input type="hidden" />
+                <i class="heart-icon fas fa-heart"></i>
+            </a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="aboutus.html">About</a></li>
+        </ul>
+    </section>
+</header>
+
+<h1>Favorites
+    <label class="add-fav2">
+        <input type="checkbox" />
+        <i class="heart-icon fas fa-heart"></i>
+    </label>
+</h1>
+
+<div>
+    <ul class="listgrid" style="grid-template-columns: repeat(2, minmax(1px, 1fr))">
+    </ul>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-icons">
+            <!-- Replace # with actual links or JavaScript functions -->
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-map-marker"></i></a>
+        </div>
+        <p>© 2024 Stay Finder | All rights reserved</p>
+        <p>This website is a result of a university group project, performed in the course DAT12301 Web technologies, at NTNU. All the information provided here is a result of imagination. Any resemblance with real companies or products is a coincidence.</p>
+    </div>
+</footer>
+
+</body>
+</html>

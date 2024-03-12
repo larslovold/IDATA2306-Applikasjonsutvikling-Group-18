@@ -1,0 +1,84 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+/**
+Go to favorites hyperlink in header
+ */
+
+.go-fav {
+    display: flow;
+    padding: 5px;
+    cursor: pointer;
+    border: hidden;
+    position: relative;
+    transition: all .5s ease;
+    border-radius: 3px;
+    text-decoration: none; /* removes underline from link */
+    color: #666;
+    width: fit-content;
+}
+
+.go-fav:hover .heart-icon::after {
+    content: " Favorites";
+    margin-left: 5px;
+    color: #3D405B;
+}
+
+/**
+Add to favorites button with white box
+ */
+
+.add-fav {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: -webkit-linear-gradient( top,#fff,#ddd) #ddd;
+    position: relative;
+    transition: all .5s ease;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 1px #eee;
+    width: fit-content;
+}
+
+.add-fav:hover {
+    background: -webkit-linear-gradient( top,#fff,#ccc) #ddd;
+}
+
+.heart-icon {
+    color: #807575;
+    position: relative;
+    transition: color 0.5s ease-in-out;
+}
+
+.add-fav input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.add-fav input[type="checkbox"]:checked + .heart-icon {
+    color: #E07A5F;
+}
+
+/**
+Add to favorites button without white box
+ */
+
+.add-fav2 {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    transition: all .5s ease;
+    border-radius: 3px;
+    width: fit-content;
+}
+
+.add-fav2 input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.add-fav2 input[type="checkbox"]:checked + .heart-icon {
+    color: #E07A5F;
+}
