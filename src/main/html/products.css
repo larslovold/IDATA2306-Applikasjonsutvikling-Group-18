@@ -1,24 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
-.container {
-    max-width: 1200px; /* Set a maximum width for the container */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0 20px; /* Add padding to the sides for spacing */
-    box-sizing: border-box; /* Include padding in the total width */
-}
-
-/* Example of making the container full-width on smaller screens */
-@media (max-width: 768px) {
-    .container {
-        max-width: 100%; /* Set maximum width to 100% for smaller screens */
-        padding: 0 10px; /* Adjust padding for smaller screens */
-    }
-}
-
-h1 {
-    padding-left: 2em;
-}
-
 /**
 Go to favorites hyperlink in header
  */
@@ -106,6 +87,41 @@ Add to favorites button without white box
 Product result section
  */
 
+.products-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 4em 2em 4em;
+    box-sizing: border-box; /* include padding in the total width */
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) { /* making container full-with on smaller screens */
+    .products-wrapper {
+        max-width: 100%; /* Set maximum width to 100% for smaller screens */
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+h1 {
+    align-content: center;
+}
+
+.product {
+    width: 100%;
+    max-width: 600px;
+    margin: 2px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adds shadow */
+    padding: 5px; /* spacing inside the box */
+    display: flex;
+    flex-direction: row; /* sets hotel content in a row */
+}
+
+.hotel-image {
+    margin-right: 1em;
+}
+
 img {
     float: left;
     width: 200px;
@@ -114,57 +130,27 @@ img {
     padding: 5px;
 }
 
-.products-wrapper {
-    padding: 2em 4em 2em 4em;
-}
-
-#results-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.products {
-    width: 100%;
-    max-width: 600px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adds shadow */
-    padding: 10px; /* spacing inside the box */
-    display: flex;
-    flex-direction: column; /* sets to column on mobile */
-}
-@media only screen and (min-width: 768px) {
-    .products {
-        flex-direction: row; /* Set flex-direction to row for larger screens */
-    }
-
-.hotel-img {
-    width: 100%;
-}
-
-.content {
-    padding: 1px;
-    text-align: left;
-    flex: 1;
-}}
-
-.info-line {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 2em;
-    flex-wrap: wrap;
-}
-
 .hotel-name {
     font-size: 1.2em;
 }
 
-.rating {
+.hotel-rating {
     font-size: 0.8em;
 }
 
-.price {
+.hotel-price {
     font-size: 0.8em;
 }
+
+@media (max-width: 768px) { /** specific to mobile/smaller screens */
+    .product {
+        width: 100%;
+        flex-direction: column; /** stacks content vertically */
+    }
+
+    .hotel-info {
+        flex: none;
+        margin-left: 0;
+        margin-top: 2px;
+        text-align: center;
+    }}

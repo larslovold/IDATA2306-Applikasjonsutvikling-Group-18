@@ -11,115 +11,115 @@
 
 <body>
 
-    <header>
-        <section class="top-nav">
-            <div class="brand-name">
-                <a href="index.html"><h1>STAY FINDER</h1></a>
-            </div>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-            <ul class="menu">
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="favorites.html" class="go-fav">
-                    <input type="hidden" />
-                    <i class="heart-icon fas fa-heart"></i>
-                </a></li>
-                <li><a href="contactus.html">Contact</a></li>
-                <li><a href="aboutus.html">About</a></li>
-            </ul>
-        </section>
-    </header>
-
-    <main class="container"> <!-- contains all main contents, responsible for sizing, alignment and padding -->
-
-    <h1>Hotels
-        <label class="add-fav">
-            <input type="checkbox" />
-            <i class="heart-icon fas fa-heart"></i>
+<header>
+    <section class="top-nav">
+        <div class="brand-name">
+            <a href="index.html"><h1>STAY FINDER</h1></a>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
         </label>
-    </h1>
-
-    <section id="filter-section">
-        <!-- filters (like price range, location and others...) -->
+        <ul class="menu">
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="favorites.html" class="go-fav">
+                <input type="hidden" />
+                <i class="heart-icon fas fa-heart"></i>
+            </a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="aboutus.html">About</a></li>
+        </ul>
     </section>
+</header>
+
+<aside id="filter-section">
+    <!-- filters (like price range, location and others...) -->
+</aside>
+
+<main class="products-wrapper"> <!-- section that views all hotels -->
+
+    <h1>Hotels</h1>
 
     <section id="sort-section">
         <!-- sorting options (from newest, most relevant, highest/lowest price...) -->
     </section>
 
-    <section id="results-section">
-        <main class="products-wrapper"> <!-- section that views all hotels -->
-
-            <article class="products"> <!-- section for each individual hotel -->
-                <figure class="hotel-img">
-                    <img src="../resources/hotel3.jpg" alt="scandic" />
-                </figure>
-                <div class="content">
-                    <section class="info-line1">
-                        <p class="rating">&starf;&starf;&starf;&starf;&starf;</p>
-                        <p class="price">Price: NOK 2200</p>
-                    </section>
-                    <section class="info-line2">
-                        <h3 class="hotel-name">Scandic hotel</h3>
-                        <label class="add-fav2">
-                            <input type="checkbox" />
-                            <i class="heart-icon fas fa-heart"></i>
-                        </label>
-                    </section>
-                </div>
-            </article>
-
-            <article class="products">
-                <figure class="hotel-img">
-                    <img src="../resources/hotel2.jpg" alt="quality" />
-                </figure>
-                <div class="content">
-                    <h3 class="hotel-name">Quality hotel waterfront</h3>
-                    <p class="rating">&starf;&starf;&starf;&starf;&star;</p>
-                    <p class="price">Price: NOK 1899</p>
-                </div>
-            </article>
-
-            <article class="products">
-                <figure class="hotel-img">
-                    <img src="../resources/aalesund.jpg" alt="brosundet" />
-                </figure>
-                <div class="content">
-                    <h3 class="hotel-name">Brosundet hotel</h3>
-                    <p class="rating">&starf;&starf;&starf;&starf;&star;</p>
-                    <p class="price">Price: NOK 1555</p>
-                </div>
-            </article>
-
-            <article class="products">
-                <figure class="hotel-img">
-                    <img src="../resources/hotel1.jpg" alt="raddison" />
-                </figure>
-                <div class="content">
-                    <h3 class="hotel-name">Radisson Blue</h3>
-                    <p class="rating">&starf;&starf;&starf;&star;&star; </p>
-                    <p class="price">Price: NOK 999</p>
-                </div>
-            </article>
-        </main>
-    </section>
-
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="contact-icons">
-                <!-- Replace # with actual links or JavaScript functions -->
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-envelope"></i></a>
-                <a href="#"><i class="fa fa-map-marker"></i></a>
-            </div>
-            <p>© 2024 Stay Finder | All rights reserved</p>
-            <p>This website is a result of a university group project, performed in the course DAT12301 Web technologies, at NTNU. All the information provided here is a result of imagination. Any resemblance with real companies or products is a coincidence.</p>
+    <article class="product"> <!-- section for each individual hotel -->
+        <figure class="hotel-image">
+            <img src="../resources/hotel3.jpg" alt="scandic" />
+        </figure>
+        <div class="hotel-info">
+            <h3 class="hotel-name">Scandic hotel</h3>
+            <p class="hotel-rating">&starf;&starf;&starf;&starf;&starf;</p>
+            <p class="hotel-price">Price: NOK 2200</p>
+            <label class="add-fav2">
+                <input type="checkbox" />
+                <i class="heart-icon fas fa-heart"></i>
+            </label>
         </div>
-    </footer>
+    </article>
+
+    <article class="product">
+        <figure class="hotel-image">
+            <img src="../resources/hotel2.jpg" alt="quality" />
+        </figure>
+        <div class="hotel-info">
+            <h3 class="hotel-name">Quality hotel waterfront</h3>
+            <p class="hotel-rating">&starf;&starf;&starf;&starf;&star;</p>
+            <p class="hotel-price">Price: NOK 1899</p>
+            <p class="hotel-description"></p>
+            <label class="add-fav2">
+                <input type="checkbox" />
+                <i class="heart-icon fas fa-heart"></i>
+            </label>
+        </div>
+    </article>
+
+    <article class="product">
+        <figure class="hotel-image">
+            <img src="../resources/aalesund.jpg" alt="brosundet" />
+        </figure>
+        <div class="hotel-info">
+            <h3 class="hotel-name">Brosundet hotel</h3>
+            <p class="hotel-rating">&starf;&starf;&starf;&starf;&star;</p>
+            <p class="hotel-price">Price: NOK 1555</p>
+            <p class="hotel-description"></p>
+            <label class="add-fav2">
+                <input type="checkbox" />
+                <i class="heart-icon fas fa-heart"></i>
+            </label>
+        </div>
+    </article>
+
+    <article class="product">
+        <figure class="hotel-image">
+            <img src="../resources/hotel1.jpg" alt="raddison" />
+        </figure>
+        <div class="hotel-info">
+            <h3 class="hotel-name">Radisson Blue</h3>
+            <p class="hotel-rating">&starf;&starf;&starf;&star;&star; </p>
+            <p class="hotel-price">Price: NOK 999</p>
+            <p class="hotel-description"></p>
+            <label class="add-fav2">
+                <input type="checkbox" />
+                <i class="heart-icon fas fa-heart"></i>
+            </label>
+        </div>
+    </article>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-icons">
+            <!-- Replace # with actual links or JavaScript functions -->
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-map-marker"></i></a>
+        </div>
+        <p>© 2024 Stay Finder | All rights reserved</p>
+        <p>This website is a result of a university group project, performed in the course DAT12301 Web technologies, at NTNU. All the information provided here is a result of imagination. Any resemblance with real companies or products is a coincidence.</p>
+    </div>
+</footer>
 
 </body>
 </html>
