@@ -68,10 +68,12 @@ Add to favorites button without white box
     padding: 5px;
     cursor: pointer;
     border: none;
-    position: relative;
     transition: all .5s ease;
     border-radius: 3px;
     width: fit-content;
+    position: absolute;
+    top: 20px;
+    right: 30px;
 }
 
 .add-fav2 input[type="checkbox"] {
@@ -84,23 +86,76 @@ Add to favorites button without white box
 }
 
 /**
+Filter sidebar
+ */
+
+#filter-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    float: left;
+}
+
+#filter-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#filter-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#filter-section li {
+    margin-bottom: 5px;
+}
+
+/**
+Sort section
+*/
+
+.sort-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.sort-by {
+    display: flex;
+    align-items: center;
+}
+
+.sort-by label {
+    margin-right: 10px;
+}
+
+.sort-by select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sort-by select {
+    appearance: none; /* removes default */
+    -webkit-appearance: none; /* for Safari and Chrome */
+    -moz-appearance: none; /* for Firefox */
+    background-color: white;
+    background-position: right 8px center; /* Position the arrow icon */
+    background-size: 12px; /* Set the size of the arrow icon */
+    cursor: pointer;
+}
+
+/**
 Product result section
  */
 
 .products-wrapper {
     max-width: 1200px;
-    margin: 0 auto;
+    margin-left: 220px;
     padding: 2em 4em 2em 4em;
     box-sizing: border-box; /* include padding in the total width */
     display: flex;
     flex-direction: column;
-}
-
-@media (max-width: 768px) { /* making container full-with on smaller screens */
-    .products-wrapper {
-        max-width: 100%; /* Set maximum width to 100% for smaller screens */
-        padding: 0 10px; /* Adjust padding for smaller screens */
-    }
 }
 
 h1 {
@@ -116,13 +171,14 @@ h1 {
     padding: 5px; /* spacing inside the box */
     display: flex;
     flex-direction: row; /* sets hotel content in a row */
+    position: relative;
 }
 
 .hotel-image {
     margin-right: 1em;
 }
 
-img {
+.hotel-image img {
     float: left;
     width: 200px;
     height: 200px;
@@ -142,7 +198,15 @@ img {
     font-size: 0.8em;
 }
 
-@media (max-width: 768px) { /** specific to mobile/smaller screens */
+/**
+Specific to mobile/smaller screens
+ */
+@media (max-width: 768px) {
+    .products-wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
     .product {
         width: 100%;
         flex-direction: column; /** stacks content vertically */
@@ -153,4 +217,13 @@ img {
         margin-left: 0;
         margin-top: 2px;
         text-align: center;
-    }}
+    }
+
+    .add-fav2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+}

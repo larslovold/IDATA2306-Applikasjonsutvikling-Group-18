@@ -40,15 +40,26 @@
 
     <h1>Hotels</h1>
 
-    <section id="sort-section">
+    <article class="sort-section">
         <!-- sorting options (from newest, most relevant, highest/lowest price...) -->
-    </section>
+        <section class="sort-by">
+            <label>Sort by:</label>
+            <label>
+                <select>
+                    <option value="/">Recommended</option>
+                    <option value="/">Highest rating</option>
+                    <option value="/">Price - high to low</option>
+                    <option value="/">Price - low to high</option>
+                </select>
+            </label>
+        </section>
+    </article>
 
     <article class="product"> <!-- section for each individual hotel -->
         <figure class="hotel-image">
             <img src="../resources/hotel3.jpg" alt="scandic" />
         </figure>
-        <div class="hotel-info">
+        <section class="hotel-info">
             <h3 class="hotel-name">Scandic hotel</h3>
             <p class="hotel-rating">&starf;&starf;&starf;&starf;&starf;</p>
             <p class="hotel-price">Price: NOK 2200</p>
@@ -56,14 +67,14 @@
                 <input type="checkbox" />
                 <i class="heart-icon fas fa-heart"></i>
             </label>
-        </div>
+        </section>
     </article>
 
     <article class="product">
         <figure class="hotel-image">
             <img src="../resources/hotel2.jpg" alt="quality" />
         </figure>
-        <div class="hotel-info">
+        <section class="hotel-info">
             <h3 class="hotel-name">Quality hotel waterfront</h3>
             <p class="hotel-rating">&starf;&starf;&starf;&starf;&star;</p>
             <p class="hotel-price">Price: NOK 1899</p>
@@ -72,14 +83,14 @@
                 <input type="checkbox" />
                 <i class="heart-icon fas fa-heart"></i>
             </label>
-        </div>
+        </section>
     </article>
 
     <article class="product">
         <figure class="hotel-image">
             <img src="../resources/aalesund.jpg" alt="brosundet" />
         </figure>
-        <div class="hotel-info">
+        <section class="hotel-info">
             <h3 class="hotel-name">Brosundet hotel</h3>
             <p class="hotel-rating">&starf;&starf;&starf;&starf;&star;</p>
             <p class="hotel-price">Price: NOK 1555</p>
@@ -88,14 +99,14 @@
                 <input type="checkbox" />
                 <i class="heart-icon fas fa-heart"></i>
             </label>
-        </div>
+        </section>
     </article>
 
     <article class="product">
         <figure class="hotel-image">
             <img src="../resources/hotel1.jpg" alt="raddison" />
         </figure>
-        <div class="hotel-info">
+        <section class="hotel-info">
             <h3 class="hotel-name">Radisson Blue</h3>
             <p class="hotel-rating">&starf;&starf;&starf;&star;&star; </p>
             <p class="hotel-price">Price: NOK 999</p>
@@ -104,7 +115,7 @@
                 <input type="checkbox" />
                 <i class="heart-icon fas fa-heart"></i>
             </label>
-        </div>
+        </section>
     </article>
 </main>
 
