@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hotel</title>
-    <link rel="stylesheet" href="products.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iR62qjwe8Uq1MZYZ3LGS2JFnY9P++Mb2ndbMzOWVP43LIG5f48f1dRx4L9QQ2Ovm3coExkoxgirjSP1PVyooQ==" crossorigin="anonymous" />
 </head>
 
@@ -22,12 +22,8 @@
         </label>
         <ul class="menu">
             <li><a href="login.html">Log In</a></li>
-            <li><a href="favorites.html" class="go-fav">
-                <input type="hidden" />
-                <i class="heart-icon fas fa-heart"></i>
-            </a></li>
-            <li><a href="contactus.html">Contact</a></li>
-            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="#footer-content">Contact</a></li>
             <li><a href="help.html">Help</a></li>
         </ul>
     </section>
@@ -121,7 +117,16 @@
 </main>
 
 <footer class="footer">
-    <div class="footer-content">
+    <a id="footer-content">
+        <h3>Contact</h3>
+        <p>For inquiries, please contact us through the following channels:</p>
+        <ul class="contact-info">
+            <li>Phone: +123 456 7890</li>
+            <li>Email: contact@example.com</li>
+        </ul>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d243647.3160916204!2d-74.0059725!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1590244516546!5m2!1sen!2sus" width="200" height="170" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
         <div class="contact-icons">
             <!-- Replace # with actual links or JavaScript functions -->
             <a href="#"><i class="fa fa-instagram"></i></a>
@@ -130,7 +135,7 @@
         </div>
         <p>© 2024 Stay Finder | All rights reserved</p>
         <p>This website is a result of a university group project, performed in the course DAT12301 Web technologies, at NTNU. All the information provided here is a result of imagination. Any resemblance with real companies or products is a coincidence.</p>
-    </div>
+    </a>
 </footer>
 
 </body>

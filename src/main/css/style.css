@@ -416,4 +416,6 @@ body {
     margin: 0 30px; /* Spacing between icons */
 }
 
-
+ul {
+    list-style: none;
+}
