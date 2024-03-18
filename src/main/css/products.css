@@ -1,5 +1,15 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+ol {
+    list-style: none;
+}
+
 /**
 Go to favorites hyperlink in header
  */
@@ -84,11 +94,17 @@ Filter sidebar
  */
 
 #filter-section {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport when scrolling */
+    z-index: 1000; /* Ensure it's above other content */
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     padding: 10px;
     width: 200px;
-    float: left;
+    border-radius: 10px;
+    transition: width 0.3s;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100vh; /* Limit height to viewport height */
 }
 
 #filter-section h2 {
@@ -96,14 +112,29 @@ Filter sidebar
     margin-bottom: 10px;
 }
 
-#filter-section ul {
-    list-style-type: none;
-    padding: 0;
+/* styling for the price slider */
+#price-slider {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
 }
 
-#filter-section li {
-    margin-bottom: 5px;
+/* styling for the range handle */
+#price-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }
+
+/* Additional styling for the labels */
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
 
 /**
 Sort section
@@ -144,10 +175,11 @@ Product result section
  */
 
 .products-wrapper {
-    max-width: 1200px;
-    margin-left: 220px;
-    padding: 2em 4em 2em 4em;
-    box-sizing: border-box; /* include padding in the total width */
+    flex: 1;
+    max-width: calc(100% - 200px); /* set max-width to accommodate filter-section */
+    margin-left: 7em; /* left margin */
+    padding: 2em 1em;
+    box-sizing: border-box; /* includes padding in the total width */
     display: flex;
     flex-direction: column;
 }
@@ -161,6 +193,7 @@ h1 {
     max-width: 600px;
     margin: 2px;
     border: 1px solid #ccc;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adds shadow */
     padding: 5px; /* spacing inside the box */
     display: flex;
@@ -174,7 +207,6 @@ h1 {
 }
 
 .hotel-image img {
-    float: left;
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -198,8 +230,13 @@ Specific to mobile/smaller screens
  */
 @media (max-width: 768px) {
     .products-wrapper {
-        max-width: 100%;
-        padding: 0 10px;
+        flex: 1;
+    }
+
+    #filter-section {
+        /* shrink sidebar to 0 width */
+        flex: 0 0 0;
+        overflow: hidden; /* hide sidebar content */
     }
 
     .product {
@@ -212,6 +249,14 @@ Specific to mobile/smaller screens
         margin-left: 0;
         margin-top: 2px;
         text-align: center;
+    }
+
+    .hotel-image img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        object-fit: cover;
+        padding: 5px;
     }
 
     .add-fav2 {
