@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Help</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Help & FAQ | Stay Finder</title>
+    <link rel="stylesheet" href="../css/help.css"> <!-- Replace with your CSS file path -->
+    <script src="https://kit.fontawesome.com/6ef9ef2ae0.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -18,14 +19,55 @@
         <ul class="menu">
             <li><a href="login.html">Log In</a></li>
             <li><a href="about-us.html">Bookmarks</a></li>
-            <li><a href="contactus.html">Contact</a></li>
-            <li><a href="aboutus.html">About</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
         </ul>
     </section>
 </header>
-<h2>Q&A</h2>
-<div class="search-area">
-    <input type="text" placeholder="What can we help you with?">
-</div>
+<main>
+    <div class="faq-container">
+        <h1>Help & Frequently Asked Questions</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="faq-section">
+            <h2>General Help</h2>
+            <div class="faq-item">
+                <h3>How do I create an account?</h3>
+                <p>To create an account, please visit our <a href="createaccount.html">registration page</a> and fill out the required information.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How can I reset my password?</h3>
+                <p>If you've forgotten your password, you can reset it by visiting the <a href="passwordreset.html">password reset page</a> and following the instructions.</p>
+            </div>
+        </div>
+        <div class="faq-section">
+            <h2>Booking Help</h2>
+            <div class="faq-item">
+                <h3>How do I book a stay?</h3>
+                <p>To book a stay, log in to your account and search for available accommodations. Once you've found the one you like, follow the prompts to complete your booking.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I cancel my booking?</h3>
+                <p>Yes, you can cancel your booking, but please be aware that cancellation policies vary depending on the property. Visit the <a href="cancellationpolicy.html">cancellation policy page</a> for more information.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-icons">
+            <!-- Replace # with actual links or JavaScript functions -->
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-map-marker"></i></a>
+        </div>
+        <p>© 2024 Stay Finder | All rights reserved</p>
+        <p>This website is a result of a university group project, performed in the course DAT12301 Web technologies, at NTNU. All the information provided here is a result of imagination. Any resemblance with real companies or products is a coincidence.</p>
+    </div>
+</footer>
+
 </body>
 </html>

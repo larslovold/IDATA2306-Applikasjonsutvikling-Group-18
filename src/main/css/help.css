@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-bg-color: #F4F1DE; /* Antique White */
+    --main-text-color: #3D405B; /* Deep Slate Blue */
+    --main-accent-color: #E07A5F; /* Terra Cotta */
+    --input-bg-color: #ffffff;
+    --input-border-color: #ced4da;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+.header-content {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name h1 {
+    margin: 0;
+    color: var(--main-text-color);
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+    padding: 0.5em 1em;
+}
+
+.brand-name a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-size: 1.5em;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: var(--main-text-color);
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+    .menu-button-container {
+        display: flex;
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        background: var(--main-bg-color);
+        padding: 20px;
+    }
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+    .menu > li {
+        display: block;
+        width: 100%;
+        color: var(--main-text-color);
+    }
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.faq-section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2em;
+}
+
+.faq-item {
+    margin-bottom: 1em;
+}
+
+.faq-item h3 {
+    color: var(--main-accent-color);
+    margin-bottom: 0.5em;
+}
+
+.faq-item p {
+    color: var(--main-text-color);
+}
+
+.footer {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    margin: auto;
+    max-width: 800px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.contact-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 44px;
+    margin: 0 30px;
+}
