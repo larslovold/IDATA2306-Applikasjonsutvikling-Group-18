@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stay Finder</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/6ef9ef2ae0.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -20,8 +20,8 @@
             <ul class="menu">
                 <li><a href="login.html">Log In</a></li>
                 <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="contactus.html">Contact</a></li>
-                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#footer-content">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
             </ul>
         </section>
     </header>
@@ -34,7 +34,9 @@
             <input type="text" id="destination" placeholder="Destination">
             <input placeholder="Check In" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="checkin" />
             <input placeholder="Check Out" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="checkout" />
-            <button id="find-button">Find</button>
+            <a href="productpage.html" class="find-button">
+                <button id="find-button">Find</button>
+            </a>
         </div>   
         
         <section class="explore-section">
@@ -76,11 +78,20 @@
         <div class="image-text-container left" style="background-color: #F4F1DE;"> <!-- Terra Cotta -->
             <img src="../resources/hotel1.jpg" alt="Room">
             <div class="text-content left">
-            <h2>OUR SERVICES</h2><p>Experience unparalleled comfort and convenience at our hotel, where every guest is treated
-            to a suite of premium amenities. From our state-of-the-art fitness center and serene spa services
-            to our fine dining options and high-speed Wi-Fi connectivity, we ensure a seamless stay whether
-            you're here for business or leisure. Our dedicated concierge service is on hand to tailor your experience
-            to your needs, making every moment of your stay exceptional.</p>
+                <h2>OUR SERVICES</h2>
+                <p> Welcome to Stay Finder, where we strive to make your travel planning easier and more affordable. Our
+                    mission is to provide you with the best hotel deals by comparing prices from various reputable hotel
+                    booking sites. With our user-friendly platform, you can effortlessly find the perfect accommodation
+                    that fits your budget and preferences. Our team is passionate about travel and technology, combining our expertise to offer a service that
+                    saves you time and money. We believe that everyone deserves a great travel experience without the stress
+                    of overpaying for accommodations.</p>
+
+                    <p>Experience unparalleled comfort and convenience at our hotels, where every guest is treated
+                    to a suite of premium amenities. From our state-of-the-art fitness center and serene spa services
+                    to our fine dining options and high-speed Wi-Fi connectivity, we ensure a seamless stay whether
+                    you're here for business or leisure. Our dedicated concierge service is on hand to tailor your experience
+                    to your needs, making every moment of your stay exceptional. Thank you for choosing us as your travel partner.
+                        We look forward to helping you make your next trip unforgettable.</p>
             </div>
 
         </div>
@@ -88,7 +99,7 @@
         <div class="image-text-container right" style="background-color: #81b29a;"> <!-- Antique White -->
             <img src="../resources/hotel2.jpg" alt="Room">
             <div class="text-content right">
-            <h2>ABOUT US</h2><p>Nestled in the heart of the city, our hotel embodies a haven of sophistication with a touch
+            <h2>ABOUT US</h2><p>Nestled in the heart of the city, our hotels embodies a haven of sophistication with a touch
             of timeless charm. Each of our rooms is designed with a blend of classic elegance and modern
             luxury, ensuring a restful night's sleep. Our commitment to excellence is echoed through our attentive
             staff, who strive to create a memorable experience for each guest. Celebrating a rich heritage
@@ -159,7 +170,16 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
+        <a id="footer-content">
+            <h3>Contact</h3>
+            <p>For inquiries, please contact us through the following channels:</p>
+            <ul class="contact-info">
+                <li>Phone: +123 456 7890</li>
+                <li>Email: contact@example.com</li>
+            </ul>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d243647.3160916204!2d-74.0059725!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1590244516546!5m2!1sen!2sus" width="200" height="170" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
             <div class="contact-icons">
                 <!-- Replace # with actual links or JavaScript functions -->
                 <a href="#"><i class="fa fa-instagram"></i></a>
@@ -168,9 +188,8 @@
             </div>
             <p>© 2024 Stay Finder | All rights reserved</p>
             <p>This website is a result of a university group project, performed in the course DAT12301 Web technologies, at NTNU. All the information provided here is a result of imagination. Any resemblance with real companies or products is a coincidence.</p>
-        </div>
+        </a>
     </footer>
-    
-    
+
 </body>
 </html>
