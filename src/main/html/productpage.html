@@ -29,8 +29,55 @@
     </section>
 </header>
 
+<div class="container">
 <aside id="filter-section">
+     <h2>Filter</h2>
     <!-- filters (like price range, location and others...) -->
+
+    <br>
+    <label>Price:</label>
+    <div id="price-slider"></div>
+
+    <br>
+    <label>Extra features:</label>
+    <div class="extras">
+    <label>
+        <input type="checkbox" value="gym"> Gym
+    </label>
+    <label>
+        <input type="checkbox" value="pool"> Pool
+    </label>
+    <label>
+        <input type="checkbox" value="breakfast"> Breakfast included
+    </label>
+    <label>
+        <input type="checkbox" value="afternoon_tea"> Afternoon tea
+    </label>
+    </div>
+
+    <br>
+    <label>Rating:</label>
+    <div class="rating">
+        <ol>
+            <li>
+        <label>
+            <input type="checkbox" value="1">&starf;&star;&star;&star;&star;
+        </label> </li>
+        <li><label>
+            <input type="checkbox" value="2">&starf;&starf;&star;&star;&star;
+        </label></li>
+        <li><label>
+            <input type="checkbox" value="3">&starf;&starf;&starf;&star;&star;
+        </label></li>
+        <li><label>
+            <input type="checkbox" value="4">&starf;&starf;&starf;&starf;&star;
+        </label></li>
+       <li> <label>
+            <input type="checkbox" value="5">&starf;&starf;&starf;&starf;&starf;
+       </label></li>
+        </ol>
+    </div>
+
 </aside>
 
 <main class="products-wrapper"> <!-- section that views all hotels -->
@@ -116,6 +163,8 @@
     </article>
 </main>
 
+</div>
+
 <footer class="footer">
     <a id="footer-content">
         <h3>Contact</h3>
@@ -140,3 +189,33 @@
 
 </body>
 </html>
+
+
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery UI library -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<script>
+    $(function() {
+        $("#price-slider").slider({
+            range: true, // enables range slider
+            min: 0,
+            max: 10000,
+            values: [0, 10000], // initial values for min and max
+            slide: function(event, ui) {
+                $("#min-price").val(ui.values[0]); // update min price input
+                $("#max-price").val(ui.values[1]); // update max price input
+            }
+        });
+
+        // initializes min and max price inputs with the default values
+        $("#min-price").val($("#price-slider").slider("values", 0));
+        $("#max-price").val($("#price-slider").slider("values", 1));
+    });
+
+</script>
