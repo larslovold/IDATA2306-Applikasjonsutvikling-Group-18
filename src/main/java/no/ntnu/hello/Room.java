@@ -9,14 +9,14 @@ public class Room {
     @Id
     private int roomId;
     @ManyToOne
-    private Hotell hotell;
+    private Hotel hotel;
     private String roomType;
     private String price;
     private boolean availability;
 
-    public Room(int roomId, int hotellid, String roomType, String price, boolean availability){
+    public Room(int roomId, int hotelid, String roomType, String price, boolean availability){
         this.roomId = roomId;
-        this.hotell = new Hotell(hotellid,"","","","","");
+        this.hotel = new Hotel(hotelid,"","", 0.0f,0 ,"");
         this.roomType = roomType;
         this.price = price;
         this.availability = availability;

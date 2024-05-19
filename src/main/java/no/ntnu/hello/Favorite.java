@@ -11,7 +11,7 @@ public class Favorite {
     @ManyToOne
     private User user;
     @ManyToOne
-    private Hotell hotell;
+    private Hotel hotel;
 
     public Favorite(){
     }
