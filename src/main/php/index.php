@@ -70,14 +70,14 @@ session_start();
                 <p> Welcome to Stay Finder, where we strive to make your travel planning easier and more affordable. Our
                     mission is to provide you with the best hotel deals by comparing prices from various reputable hotel
                     booking sites. With our user-friendly platform, you can effortlessly find the perfect accommodation
-                    that fits your budget and preferences. Our team is passionate about travel and technology, combining our expertise to offer a service that
+                    that fits your budget and preferences. Our team is passionate about travel and technology, combining our expertise to offer a stayfinder.service that
                     saves you time and money. We believe that everyone deserves a great travel experience without the stress
                     of overpaying for accommodations.</p>
 
                     <p>Experience unparalleled comfort and convenience at our hotels, where every guest is treated
                     to a suite of premium amenities. From our state-of-the-art fitness center and serene spa services
                     to our fine dining options and high-speed Wi-Fi connectivity, we ensure a seamless stay whether
-                    you're here for business or leisure. Our dedicated concierge service is on hand to tailor your experience
+                    you're here for business or leisure. Our dedicated concierge stayfinder.service is on hand to tailor your experience
                     to your needs, making every moment of your stay exceptional. Thank you for choosing us as your travel partner.
                         We look forward to helping you make your next trip unforgettable.</p>
             </div>
@@ -126,7 +126,7 @@ session_start();
                     <span class="stars">★★★★★</span>
                     <h3>Donald Trump</h3>
                     <p class="review-title">Great Prices, Easy Navigation</p>
-                    <p class="review-text">""Absolutely fantastic! The luxury rooms are the best. It's clear that they know good business and service. I'll be back!"
+                    <p class="review-text">""Absolutely fantastic! The luxury rooms are the best. It's clear that they know good business and stayfinder.service. I'll be back!"
                     </div>
         
                 <!-- Review 3 -->

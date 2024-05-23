@@ -7,8 +7,8 @@ $hotel_id = $_GET['id'];
 
 // Dummy data for hotels
 $hotels = [
-    1 => ["name" => "Andante Hotel", "location" => "City Center", "features" => "Complimentary Wi-Fi, Rooftop Pool, 24-hour Gym Access", "images" => "andante.jpg"],
-    2 => ["name" => "Thon Hotel Ålesund", "location" => "Coastal/Fjord View", "features" => "Free Breakfast, Fjord View Rooms, Conference Facilities", "images" => "thon.jpg"],
+    1 => ["name" => "Andante stayfinder.model.Hotel", "location" => "City Center", "features" => "Complimentary Wi-Fi, Rooftop Pool, 24-hour Gym Access", "images" => "andante.jpg"],
+    2 => ["name" => "Thon stayfinder.model.Hotel Ålesund", "location" => "Coastal/Fjord View", "features" => "Free Breakfast, Fjord View Rooms, Conference Facilities", "images" => "thon.jpg"],
     // Add more hotels as needed
 ];
 

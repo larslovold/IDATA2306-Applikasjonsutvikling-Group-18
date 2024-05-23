@@ -9,16 +9,16 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Room Page</title>
+    <title>stayfinder.model.Hotel Room Page</title>
     <link rel="stylesheet" href="../css/productpage2.css">
 </head>
 <body>
 
 <main>
     <section class="hotel-overview">
-        <h2>Adante Hotel</h2>
+        <h2>Adante stayfinder.model.Hotel</h2>
         <div class="image-gallery">
-            <img src="../resources/hotel1.jpg" alt="Hotel Image 3">
+            <img src="../resources/hotel1.jpg" alt="stayfinder.model.Hotel Image 3">
         </div>
         <p class="hotel-description">Situated in Valera de Abajo, 45 km from Cuenca Train Station and 46 km from Hanging Houses of Cuenca, Casa rural La Marquesa - Cuenca offers a garden and air conditioning.<br> This property offers access to darts. The tour desk is available to assist guests in planning their days out.<br>
 
@@ -69,7 +69,7 @@ session_start();
                 <span class="stars">★★★★★</span>
                 <h3>Donald Trump</h3>
                 <p class="review-title">Great Prices, Easy Navigation</p>
-                <p class="review-text">""Absolutely fantastic! The luxury rooms are the best. It's clear that they know good business and service. I'll be back!"
+                <p class="review-text">""Absolutely fantastic! The luxury rooms are the best. It's clear that they know good business and stayfinder.service. I'll be back!"
             </div>
 
             <!-- Review 3 -->
