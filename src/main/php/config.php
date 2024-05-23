@@ -2,7 +2,7 @@
 // Database configuration
 $host = 'localhost';
 $username = 'root';
-$password = ''; // Your MySQL root password, if any
+$password = '';
 $database = 'stayfinder';
 
 // Create a new MySQLi connection

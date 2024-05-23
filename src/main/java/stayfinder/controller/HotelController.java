@@ -1,15 +1,18 @@
 package stayfinder.controller;
 
-import stayfinder.service.HotelService;
-import stayfinder.model.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import stayfinder.model.Hotel;
+import stayfinder.service.HotelService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/hotels")
+
+@CrossOrigin(origins = "http://localhost:3306")
+
 public class HotelController {
 
     @Autowired
