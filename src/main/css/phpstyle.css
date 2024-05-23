@@ -1,0 +1,8 @@
+body{ font: 14px sans-serif; }
+.wrapper{ width: 350px; padding: 20px; margin: 0 auto; }
+.form-group{ margin-bottom: 15px; }
+.has-error .help-block{ color: red; }
+.page-header{ margin-bottom: 20px; }
+.btn{ padding: 10px 20px; cursor: pointer; }
+.btn-primary{ background-color: #337ab7; border-color: #2e6da4; color: white; }
+.btn-danger{ background-color: #d9534f; border-color: #d43f3a; color: white; }

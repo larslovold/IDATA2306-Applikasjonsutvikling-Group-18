@@ -1,0 +1,300 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F1DE;
+    color: #3D405B;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #F4F1DE; /* Antique White */
+}
+
+.scrollbar {
+    -ms-overflow-style: none;  /* hides scrollbar in IE and Edge */
+}
+
+::-webkit-scrollbar {
+    display: none; /* hides scrollbar in Chrome, Safari and Opera */
+}
+
+.header-content {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name h1 {
+    margin: 0;
+    color: #3D405B; /* Deep Slate Blue */
+    font-size: large;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #F4F1DE; /* Deep Slate Blue for the header background */
+    color: #3D405B; /* Antique White for the text */
+    padding: 0.5em 1em; /* Adjust padding to your liking */
+}
+
+.brand-name a {
+    text-decoration: none;
+    color: #F4F1DE; /* Antique White for the brand name */
+    font-size: 1.5em; /* Adjust the size as needed */
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu a {
+    color: #3D405B; /* Antique White for menu links */
+    text-decoration: none;
+}
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #3D405B; /* Antique White for the burger icon */
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+    .menu-button-container {
+        display: flex;
+    }
+    .menu {
+        display: none; /* Hide menu initially, will be shown when checkbox is checked */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        flex-direction:column;
+        width: 100%;
+        align-items: center;
+        background: #F4F1DE;
+        padding: 20px;
+    }
+    #menu-toggle:checked ~ .menu {
+        display: flex; /* Show menu when checkbox is checked */
+    }
+    .menu > li {
+        display: block;
+        width: 100%;
+        color: white;
+    }
+
+}
+.hotel-overview {
+    text-align: left;
+    margin: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: left;
+}
+
+.image-gallery img {
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hotel-description {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.room-types {
+    margin-top: 2rem;
+}
+
+.room {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.room img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.room-details {
+    padding: 1rem;
+}
+
+.room-details h3 {
+    margin-top: 0;
+}
+
+.room-price {
+    color: #E07A5F;
+    font-weight: bold;
+}
+
+.book-room {
+    background-color: #E07A5F;
+    color: #F4F1DE;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.book-room:hover {
+    background-color: #d86952;
+}
+
+.amenities {
+    margin-top: 2rem;
+}
+
+.amenities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.amenities ul li {
+    background-color: #81B29A;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.reviews-section {
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 20px;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    margin-bottom: 20px;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.review {
+    flex: 1; /* Allows flex items to grow and shrink */
+    max-width: 23%; /* Set a maximum width */
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+    margin: 10px; /* Add some margin for spacing */
+    padding: 15px;
+    text-align: left;
+}
+
+.review h3 {
+    margin-top: 10px;
+}
+
+.review-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.stars {
+    color: black; /* Gold color for stars */
+    font-size: 1.2em; /* Larger font size for stars */
+    margin-bottom: 5px; /* Space below the stars */
+}
+.footer {
+    background-color: #2C3E50; /* Dark background for the footer */
+    color: #fff; /* White text color */
+    padding: 20px;
+    margin-top: auto;
+    text-align: center; /* Centering the content */
+}
+
+.footer-content {
+    margin: auto;
+    max-width: 800px; /* Max width for the footer content */
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Centering the icons */
+    margin: 50px; /* Space below icons */
+}
+
+.contact-icons a {
+    text-decoration: none;
+    color: #fff; /* White text color for icons */
+    font-size: 44px; /* Size of icons */
+    margin: 0 30px; /* Spacing between icons */
+}
+
+ul {
+    list-style: none;
+}
