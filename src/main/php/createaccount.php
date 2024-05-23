@@ -1,33 +1,32 @@
 <?php
 session_start();
+require_once 'config.php';
 ?>
+
 <?php include 'header.php'; ?>
 
 <?php
-// Include database configuration file
-require_once 'config.php';
-
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = $email = "";
 $username_err = $password_err = $confirm_password_err = $email_err = "";
 
 // Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate username
-    if(empty(trim($_POST["username"]))){
+    if (empty(trim($_POST["username"]))) {
         $username_err = "Please enter a username.";
     } else {
-        $sql = "SELECT id FROM users WHERE username = ?";
+        $sql = "SELECT userID FROM users WHERE username = ?";
 
-        if($stmt = $mysqli->prepare($sql)){
+        if ($stmt = $mysqli->prepare($sql)) {
             $stmt->bind_param("s", $param_username);
             $param_username = trim($_POST["username"]);
 
-            if($stmt->execute()){
+            if ($stmt->execute()) {
                 $stmt->store_result();
 
-                if($stmt->num_rows == 1){
+                if ($stmt->num_rows == 1) {
                     $username_err = "This username is already taken.";
                 } else {
                     $username = trim($_POST["username"]);
@@ -41,21 +40,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate email
-    if(empty(trim($_POST["email"]))){
+    if (empty(trim($_POST["email"]))) {
         $email_err = "Please enter an email.";
-    } elseif(!filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL)){
+    } elseif (!filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL)) {
         $email_err = "Invalid email format.";
     } else {
-        $sql = "SELECT id FROM users WHERE email = ?";
+        $sql = "SELECT userID FROM users WHERE email = ?";
 
-        if($stmt = $mysqli->prepare($sql)){
+        if ($stmt = $mysqli->prepare($sql)) {
             $stmt->bind_param("s", $param_email);
             $param_email = trim($_POST["email"]);
 
-            if($stmt->execute()){
+            if ($stmt->execute()) {
                 $stmt->store_result();
 
-                if($stmt->num_rows == 1){
+                if ($stmt->num_rows == 1) {
                     $email_err = "This email is already registered.";
                 } else {
                     $email = trim($_POST["email"]);
@@ -69,37 +68,37 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate password
-    if(empty(trim($_POST["password"]))){
+    if (empty(trim($_POST["password"]))) {
         $password_err = "Please enter a password.";
-    } elseif(strlen(trim($_POST["password"])) < 6){
+    } elseif (strlen(trim($_POST["password"])) < 6) {
         $password_err = "Password must have at least 6 characters.";
     } else {
         $password = trim($_POST["password"]);
     }
 
     // Validate confirm password
-    if(empty(trim($_POST["confirm_password"]))){
+    if (empty(trim($_POST["confirm_password"]))) {
         $confirm_password_err = "Please confirm password.";
     } else {
         $confirm_password = trim($_POST["confirm_password"]);
-        if(empty($password_err) && ($password != $confirm_password)){
+        if (empty($password_err) && ($password != $confirm_password)) {
             $confirm_password_err = "Password did not match.";
         }
     }
 
     // Check input errors before inserting in database
-    if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err)){
+    if (empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err)) {
 
         $sql = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
 
-        if($stmt = $mysqli->prepare($sql)){
+        if ($stmt = $mysqli->prepare($sql)) {
             $stmt->bind_param("sss", $param_username, $param_password, $param_email);
 
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             $param_email = $email;
 
-            if($stmt->execute()){
+            if ($stmt->execute()) {
                 header("location: login.php");
             } else {
                 echo "Something went wrong. Please try again later.";
@@ -112,6 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $mysqli->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,40 +122,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
 
-    <main>
-        <div class="login-container">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="login-form">
-                <h1>Create Account</h1>
-                <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" required value="<?php echo $username; ?>">
-                    <span class="help-block"><?php echo $username_err; ?></span>
-                </div>
+<main>
+    <div class="login-container">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="login-form">
+            <h1>Create Account</h1>
+            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required value="<?php echo $username; ?>">
+                <span class="help-block"><?php echo $username_err; ?></span>
+            </div>
 
-                <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required value="<?php echo $email; ?>">
-                    <span class="help-block"><?php echo $email_err; ?></span>
-                </div>
+            <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required value="<?php echo $email; ?>">
+                <span class="help-block"><?php echo $email_err; ?></span>
+            </div>
 
-                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
-                    <span class="help-block"><?php echo $password_err; ?></span>
-                </div>
+            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <span class="help-block"><?php echo $password_err; ?></span>
+            </div>
 
-                <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                    <label for="confirm_password">Confirm Password</label>
-                    <input type="password" name="confirm_password" id="confirm_password" required>
-                    <span class="help-block"><?php echo $confirm_password_err; ?></span>
-                </div>
+            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+                <span class="help-block"><?php echo $confirm_password_err; ?></span>
+            </div>
 
-                <div class="form-group">
-                    <input type="submit" value="Create Account">
-                </div>
-                <h3><a href="login.php">Already have an account? Click here</a></h3>
-            </form>
-        </div>
-    </main>
+            <div class="form-group">
+                <input type="submit" value="Create Account">
+            </div>
+            <h3><a href="login.php">Already have an account? Click here</a></h3>
+        </form>
+    </div>
+</main>
 </body>
 </html>
