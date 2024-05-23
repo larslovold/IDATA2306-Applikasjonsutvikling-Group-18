@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+<?php include 'header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +11,7 @@
     <script src="https://kit.fontawesome.com/6ef9ef2ae0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <section class="top-nav">
-        <div class="brand-name">
-            <a href="index.html"><h1>STAY FINDER</h1></a>
-        </div>
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-        <ul class="menu">
-            <li><a href="login.html">Log In</a></li>
-            <li><a href="favorites.html">Favorites</a></li>
-            <li><a href="#footer-content">Contact</a></li>
-            <li><a href="help.html">Help</a></li>
-        </ul>
-    </section>
-</header>
+
 <main>
     <div class="faq-container">
         <h1>Help & Frequently Asked Questions</h1>

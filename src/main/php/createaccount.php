@@ -1,4 +1,9 @@
 <?php
+session_start();
+?>
+<?php include 'header.php'; ?>
+
+<?php
 // Include database configuration file
 require_once 'config.php';
 
@@ -95,7 +100,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_email = $email;
 
             if($stmt->execute()){
-                header("location: ../html/login.html");
+                header("location: login.php");
             } else {
                 echo "Something went wrong. Please try again later.";
             }
@@ -112,27 +117,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Create Account | Stay Finder</title>
-    <link rel="stylesheet" href="../css/createaccount.css">
+    <link rel="stylesheet" href="../css/login.css">
     <script src="https://kit.fontawesome.com/6ef9ef2ae0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <section class="top-nav">
-            <div class="brand-name">
-                <a href="index.html"><h1>STAY FINDER</h1></a>
-            </div>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-            <ul class="menu">
-                <li><a href="help.html">Help</a></li>
-            </ul>
-        </section>
-    </header>
+
     <main>
-        <div class="createaccount-container">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="createaccount-form">
+        <div class="login-container">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="login-form">
                 <h1>Create Account</h1>
                 <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                     <label for="username">Username</label>
@@ -161,7 +153,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="form-group">
                     <input type="submit" value="Create Account">
                 </div>
-                <h3><a href="login.html">Already have an account? Click here</a></h3>
+                <h3><a href="login.php">Already have an account? Click here</a></h3>
             </form>
         </div>
     </main>

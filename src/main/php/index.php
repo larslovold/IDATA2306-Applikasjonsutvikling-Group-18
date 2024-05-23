@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,24 +11,9 @@
     <script src="https://kit.fontawesome.com/6ef9ef2ae0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <section class="top-nav">
-            <div class="brand-name">
-                <a href="index.html"><h1>STAY FINDER</h1></a>
-            </div>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-            <ul class="menu">
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="productpage.html">Favorites</a></li>
-                <li><a href="#footer-content">Contact</a></li>
-                <li><a href="help.html">Help</a></li>
-            </ul>
-        </section>
-    </header>
-    
+
+    <?php include 'header.php'; ?>
+
     <main>
         <div class="headline">
             <h1>DISCOVER YOUR DREAM STAY WITH STAY FINDER TODAY!</h1>
@@ -43,7 +31,7 @@
             <h2>Explore the World</h2>
             <h3>These are our most popular destinations</h3>
             <div class="destinations-container">
-                <a href="oslo.html" class="destination">
+                <a href="productpage2.php" class="destination">
                     <img src="../resources/aalesund.jpg" alt="Ålesund">
                     <p>Ålesund</p>
                 </a>

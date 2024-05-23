@@ -140,21 +140,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 80vh; /* Adjust the height as needed */
     padding: 2em;
-    background-color: #F4F1DE;
+    background-color: var(--main-bg-color);
 }
 
 .create-account-form {
     width: 100%;
     max-width: 400px;
     padding: 2em;
-    background: #ffffff;
+    background: var(--input-bg-color);
     margin: 2em;
 }
 
 .create-account-form h1 {
-    color: #3D405B;
+    color: var(--main-text-color);
     margin-bottom: 1em;
     text-align: center;
 }
@@ -165,7 +165,7 @@ body {
 
 .form-group label {
     display: block;
-    color: #3D405B;
+    color: var(--main-text-color);
     margin-bottom: .5em;
 }
 

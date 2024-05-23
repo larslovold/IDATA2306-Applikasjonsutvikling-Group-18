@@ -267,6 +267,22 @@ body {
         margin: 1em;
     }
 }
+/* Error message styling */
+.alert {
+    padding: 1em;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.help-block {
+    color: #d9534f;
+    font-size: 0.875em;
+}
+
 
 .footer {
   background-color: #2C3E50; /* Dark background for the footer */

@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 // Include database configuration file
 require_once 'config.php';
 
@@ -9,7 +12,8 @@ $username_err = $password_err = $confirm_password_err = $email_err = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    // Validate username
+    // Validate username    <?php include 'header.php'; ?>
+
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter a username.";
     } else {
